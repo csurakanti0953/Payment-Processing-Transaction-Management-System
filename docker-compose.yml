@@ -1,0 +1,14 @@
+version: '3'
+services:
+  payment-service:
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+  transaction-service:
+    build:
+      context: ./transaction-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
